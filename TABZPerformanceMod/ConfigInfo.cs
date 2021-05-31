@@ -10,11 +10,13 @@ namespace TABZPerformanceMod
     {
         public float CameraFOV;
         public float CameraRenderDistance;
+        public float MinBrightness;
 
-        public ConfigInfo(float CameraFOV, float CameraRenderDistance)
+        public ConfigInfo(float CameraFOV, float CameraRenderDistance, float MinBrightness)
         {
             this.CameraFOV = CameraFOV;
             this.CameraRenderDistance = CameraRenderDistance;
+            this.MinBrightness = MinBrightness;
         }
 
         public static ConfigInfo FromJson(string path)
@@ -26,7 +28,7 @@ namespace TABZPerformanceMod
         public void ToJsonFile(string path)
         {
             string file = JsonUtility.ToJson(this);
-            StreamWriter s = File.CreateText(path + "/TBZPerformanceModConfig.json");
+            StreamWriter s = File.CreateText(path + "/TABZPerformanceModConfig.json");
             s.Write(file);
             s.Flush();
             s.Close();
