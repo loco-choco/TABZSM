@@ -93,12 +93,12 @@ namespace TABZSettingsMod
                 else if (__instance.currentWeapon && __instance.currentWeapon.currentADS && SettingsMod.config.AimCameraWobble > 0)
                 {
                     Quaternion rotation = Quaternion.LookRotation(__instance.currentWeapon.currentADS.forward, Vector3.up);
-                    Camera.main.transform.rotation = Quaternion.Slerp(Camera.main.transform.rotation, rotation, Time.deltaTime * SettingsMod.config.AimCameraWobble / 10);
+                    Camera.main.transform.rotation = Quaternion.Slerp(Camera.main.transform.rotation, rotation, Time.deltaTime * SettingsMod.config.AimCameraWobble / 10f);
                 }
             }
             Transform cameraRotation = cameraRotationAT(__instance);
-            cameraRotation.Rotate(Vector3.up * Input.GetAxis("Mouse X") * SettingsMod.config.MouseXSensitivity / 100, Space.World);
-            cameraRotation.Rotate(cameraRotation.right * -Input.GetAxis("Mouse Y") * SettingsMod.config.MouseYSensitivity / 100, Space.World);
+            cameraRotation.Rotate(Vector3.up * Input.GetAxis("Mouse X") * SettingsMod.config.MouseXSensitivity / 100f, Space.World);
+            cameraRotation.Rotate(cameraRotation.right * -Input.GetAxis("Mouse Y") * SettingsMod.config.MouseYSensitivity / 100f, Space.World);
         }
     }
 
