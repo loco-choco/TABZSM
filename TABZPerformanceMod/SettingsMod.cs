@@ -2,6 +2,7 @@
 using UnityEngine;
 using CAMOWA;
 using HarmonyLib;
+using System.Reflection;
 
 namespace TABZSettingsMod
 {
@@ -15,7 +16,7 @@ namespace TABZSettingsMod
             get
             {
                 if (string.IsNullOrEmpty(gamePath))
-                    gamePath = Application.dataPath.Remove(Application.dataPath.LastIndexOf('/'));
+                    gamePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
                 return gamePath;
             }
 

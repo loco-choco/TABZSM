@@ -38,8 +38,9 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\..\TABZ modded v5\GAME_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="CAMOWA">
-      <HintPath>..\..\..\..\..\..\TABZ modded v5\GAME_Data\Managed\CAMOWA.dll</HintPath>
+    <Reference Include="CAMOWA, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DIMOWA\CAMOWA\bin\Release\CAMOWA.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -1,3 +1,8 @@
 {
-	"fileName" : "TABZSettingsMod.dll"	
+	"filename" : "TABZSettingsMod.dll",
+	"author": "Locochoco",
+	"name": "Settings Mod",
+	"uniqueName": "Locochoco.SM",
+	"description": "Adds more settings that can be changed from a JSON file.",	
+	"version": "1.0.2",
 }
