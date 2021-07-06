@@ -10,7 +10,9 @@ namespace TABZSettingsMod
     {
         public float CameraFOV;
         public float CameraRenderDistance;
+        public float FogStartDistance;
         public float MinBrightness;
+        public float MaxBrightness;
 
         //Porcentages
         public int AimCameraWobble;
@@ -18,14 +20,17 @@ namespace TABZSettingsMod
         public int MouseYSensitivity;
 
 
-        public ConfigInfo(float CameraFOV, float CameraRenderDistance, float MinBrightness, int AimCameraWooble, int MouseXSensitivity, int MouseYSensitivity)
+        public ConfigInfo(float CameraFOV, float CameraRenderDistance, float MinBrightness, float MaxBrightness, int AimCameraWobble, int MouseXSensitivity, int MouseYSensitivity)
         {
             this.CameraFOV = CameraFOV;
             this.CameraRenderDistance = CameraRenderDistance;
             this.MinBrightness = MinBrightness;
-            this.AimCameraWobble = AimCameraWooble;
+            this.MaxBrightness = MaxBrightness;
+            this.AimCameraWobble = AimCameraWobble;
             this.MouseXSensitivity = MouseXSensitivity;
             this.MouseYSensitivity = MouseYSensitivity;
+
+            FogStartDistance = 0f;
         }
 
         public static ConfigInfo FromJson(string path)
